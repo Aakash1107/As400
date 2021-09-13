@@ -1,0 +1,8 @@
+     A                                      UNIQUE
+     A          R REQ_REC
+     A            REQ_ID         5S 0
+     A            REQ_TYPE      25A
+     A            REQ_DESC     100A
+     A            REQ_STS       14A
+     A            COMADM        30A
+     A          K REQ_ID

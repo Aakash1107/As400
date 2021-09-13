@@ -1,0 +1,547 @@
+     A*%%TS  SD  20210907  041948  AAKASH      REL-V7R4M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      INDARA
+     A          R C_HSCR
+     A*%%TS  SD  20210907  032931  AAKASH      REL-V7R4M0  5770-WDS
+     A                                      CA03(03 'Exit')
+     A                                      CA12(12 'Back')
+     A                                  1 34'PROGRAMMERS.IO'
+     A                                      DSPATR(RI)
+     A                                      COLOR(BLU)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(BLU)
+     A                                  2 72TIME
+     A                                      COLOR(BLU)
+     A                                  1  2'WELCOME POLICY HOLDER'
+     A                                      COLOR(WHT)
+     A            D_USRNAME     15A  O  2  2
+     A                                  3 27'INSURANCE MANAGEMENT SYSTEM'
+     A                                      DSPATR(RI)
+     A                                      COLOR(WHT)
+     A                                 23  2'F3=Exit'
+     A                                      COLOR(BLU)
+     A                                 23 13'F12=Back'
+     A                                      COLOR(BLU)
+     A                                 20  2'Parameters or Command'
+     A                                      COLOR(BLU)
+     A                                 21  2'===>'
+     A                                      COLOR(WHT)
+     A            COM_LINE      74A  B 21  7
+     A                                 10  2'1.'
+     A                                      COLOR(WHT)
+     A                                 11  2'2.'
+     A                                      COLOR(WHT)
+     A                                 12  2'3.'
+     A                                      COLOR(WHT)
+     A                                 13  2'4.'
+     A                                      COLOR(WHT)
+     A                                 14  2'5.'
+     A                                      COLOR(WHT)
+     A                                 15  2'6.'
+     A                                      COLOR(WHT)
+     A                                 10  5'View Personal Details'
+     A                                 11  5'Policy Enquiry'
+     A                                 12  5'View Own Policy Details'
+     A                                 13  5'View Request'
+     A                                 14  5'Raise Complaint'
+     A                                 15  5'Change Password'
+     A            C_HERRMSG     70A  O 24  2COLOR(WHT)
+     A                                 17  1'90.'
+     A                                      COLOR(WHT)
+     A                                 17  5'Sign OFF'
+     A                                  8  2'Type Option,Press Enter'
+     A                                      COLOR(BLU)
+     A                                  7  2'Select One of the Following:'
+     A                                      COLOR(BLU)
+     A                                  5 29'Policy Holder Main Menu'
+     A                                      COLOR(WHT)
+     A                                      DSPATR(UL)
+     A                                  1 10'Policy Holder'
+     A                                      COLOR(WHT)
+     A          R CUST_PDTL
+     A*%%TS  SD  20210907  032931  AAKASH      REL-V7R4M0  5770-WDS
+     A                                      CA03(03 'Exit')
+     A                                      CA12(12 'Back')
+     A                                      CF07(07 'Update Request')
+     A                                  1 34'PROGRAMMERS.IO'
+     A                                      DSPATR(RI)
+     A                                      COLOR(BLU)
+     A                                  3 27'INSURANCE MANAGEMENT SYSTEM'
+     A                                      DSPATR(RI)
+     A                                      COLOR(WHT)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(BLU)
+     A                                  2 72TIME
+     A                                      COLOR(BLU)
+     A                                  1  2'WELCOME POLICY HOLDER'
+     A                                      COLOR(WHT)
+     A            D_USRNAME     15A  O  2  2
+     A                                  5 33'Personal Details'
+     A                                      COLOR(WHT)
+     A                                      DSPATR(UL)
+     A                                 23  2'F3=Exit'
+     A                                      COLOR(BLU)
+     A                                 23 13'F12=Back'
+     A                                      COLOR(BLU)
+     A                                 23 25'F7=Update Request'
+     A                                      COLOR(BLU)
+     A                                  7  2'User ID........:'
+     A                                      COLOR(WHT)
+     A                                  8  2'User Name......:'
+     A                                      COLOR(WHT)
+     A                                 10  2'Mobile No......:'
+     A                                      COLOR(WHT)
+     A                                 11  2'Alt Mobile No..:'
+     A                                      COLOR(WHT)
+     A                                  9  2'Email Address..:'
+     A                                      COLOR(WHT)
+     A                                 13  2'Gender.........:'
+     A                                      COLOR(WHT)
+     A                                 14  2'Aadhaar No.....:'
+     A                                      COLOR(WHT)
+     A                                 12  2'Date of Birth..:'
+     A                                      COLOR(WHT)
+     A                                 17  2'Landmark.......:'
+     A                                      COLOR(WHT)
+     A                                 18  2'City...........:'
+     A                                      COLOR(WHT)
+     A                                 15  2'Address........:'
+     A                                      COLOR(WHT)
+     A                                 19  2'Pin Code.......:'
+     A                                      COLOR(WHT)
+     A                                 20  2'State..........:'
+     A                                      COLOR(WHT)
+     A                                 21  2'Country........:'
+     A                                      COLOR(WHT)
+     A            CUST_ID   R        O  7 28REFFLD(CUST_REC/CUST_ID AAKASH/CUST-
+     A                                      _MAST)
+     A            CUST_NAME R        O  8 28REFFLD(CUST_REC/CUST_NAME AAKASH/CU-
+     A                                      ST_MAST)
+     A            C_ADDR    R        B 15 28REFFLD(CUST_REC/C_ADDR AAKASH/CUST_-
+     A                                      MAST)
+     A                                      CNTFLD(050)
+     A  13                                  DSPATR(UL)
+     A                                      DSPATR(PR)
+     A            C_LANMRK  R        O 17 28REFFLD(CUST_REC/C_LANMRK AAKASH/CUS-
+     A                                      T_MAST)
+     A            C_CITY    R        O 18 28REFFLD(CUST_REC/C_CITY AAKASH/CUST_-
+     A                                      MAST)
+     A            C_PINCDE  R        O 19 28REFFLD(CUST_REC/C_PINCDE AAKASH/CUS-
+     A                                      T_MAST)
+     A            C_STATE   R        O 20 28REFFLD(CUST_REC/C_STATE AAKASH/CUST-
+     A                                      _MAST)
+     A            C_EMAIL   R        O  9 28REFFLD(CUST_REC/C_EMAIL AAKASH/CUST-
+     A                                      _MAST)
+     A            C_MOBNO   R        O 10 28REFFLD(CUST_REC/C_MOBNO AAKASH/CUST-
+     A                                      _MAST)
+     A            C_ALTMOB  R        O 11 28REFFLD(CUST_REC/C_ALTMOB AAKASH/CUS-
+     A                                      T_MAST)
+     A            C_GENDER  R        O 13 28REFFLD(CUST_REC/C_GENDER AAKASH/CUS-
+     A                                      T_MAST)
+     A            C_AADHAR  R        O 14 28REFFLD(CUST_REC/C_AADHAR AAKASH/CUS-
+     A                                      T_MAST)
+     A            C_COUNTRY R        O 21 28REFFLD(CUST_REC/C_COUNTRY AAKASH/CU-
+     A                                      ST_MAST)
+     A          R CUST_UPDTL
+     A*%%TS  SD  20210907  032931  AAKASH      REL-V7R4M0  5770-WDS
+     A                                      CA03(03 'Exit')
+     A                                      CA12(12 'Back')
+     A                                      CF07(07 'Update Request')
+     A                                  1 34'PROGRAMMERS.IO'
+     A                                      DSPATR(RI)
+     A                                      COLOR(BLU)
+     A                                  3 27'INSURANCE MANAGEMENT SYSTEM'
+     A                                      DSPATR(RI)
+     A                                      COLOR(WHT)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(BLU)
+     A                                  2 72TIME
+     A                                      COLOR(BLU)
+     A                                  1  2'WELCOME POLICY HOLDER'
+     A                                      COLOR(WHT)
+     A            D_USRNAME     15A  O  2  2
+     A                                 23  2'F3=Exit'
+     A                                      COLOR(BLU)
+     A                                 23 13'F12=Back'
+     A                                      COLOR(BLU)
+     A                                  7  2'User ID........:'
+     A                                      COLOR(WHT)
+     A                                  8  2'User Name......:'
+     A                                      COLOR(WHT)
+     A                                 10  2'Mobile No......:'
+     A                                      COLOR(WHT)
+     A                                 11  2'Alt Mobile No..:'
+     A                                      COLOR(WHT)
+     A                                  9  2'Email Address..:'
+     A                                      COLOR(WHT)
+     A                                 13  2'Gender.........:'
+     A                                      COLOR(WHT)
+     A                                 14  2'Aadhaar No.....:'
+     A                                      COLOR(WHT)
+     A                                 12  2'Date of Birth..:'
+     A                                      COLOR(WHT)
+     A                                 17  2'Landmark.......:'
+     A                                      COLOR(WHT)
+     A                                 18  2'City...........:'
+     A                                      COLOR(WHT)
+     A                                 15  2'Address........:'
+     A                                      COLOR(WHT)
+     A                                 19  2'Pin Code.......:'
+     A                                      COLOR(WHT)
+     A                                 20  2'State..........:'
+     A                                      COLOR(WHT)
+     A                                 21  2'Country........:'
+     A                                      COLOR(WHT)
+     A            CUST_ID   R        O  7 28REFFLD(CUST_REC/CUST_ID AAKASH/CUST-
+     A                                      _MAST)
+     A            CUST_NAME R        B  8 28REFFLD(CUST_REC/CUST_NAME AAKASH/CU-
+     A                                      ST_MAST)
+     A            C_ADDR    R        B 15 28REFFLD(CUST_REC/C_ADDR AAKASH/CUST_-
+     A                                      MAST)
+     A                                      CNTFLD(050)
+     A            C_LANMRK  R        B 17 28REFFLD(CUST_REC/C_LANMRK AAKASH/CUS-
+     A                                      T_MAST)
+     A            C_CITY    R        B 18 28REFFLD(CUST_REC/C_CITY AAKASH/CUST_-
+     A                                      MAST)
+     A            C_PINCDE  R        B 19 28REFFLD(CUST_REC/C_PINCDE AAKASH/CUS-
+     A                                      T_MAST)
+     A            C_STATE   R        B 20 28REFFLD(CUST_REC/C_STATE AAKASH/CUST-
+     A                                      _MAST)
+     A            C_EMAIL   R        B  9 28REFFLD(CUST_REC/C_EMAIL AAKASH/CUST-
+     A                                      _MAST)
+     A            C_MOBNO   R        B 10 28REFFLD(CUST_REC/C_MOBNO AAKASH/CUST-
+     A                                      _MAST)
+     A            C_ALTMOB  R        B 11 28REFFLD(CUST_REC/C_ALTMOB AAKASH/CUS-
+     A                                      T_MAST)
+     A            C_GENDER  R        B 13 28REFFLD(CUST_REC/C_GENDER AAKASH/CUS-
+     A                                      T_MAST)
+     A            C_AADHAR  R        B 14 28REFFLD(CUST_REC/C_AADHAR AAKASH/CUS-
+     A                                      T_MAST)
+     A            C_COUNTRY R        B 21 28REFFLD(CUST_REC/C_COUNTRY AAKASH/CU-
+     A                                      ST_MAST)
+     A                                  5 29'Update Personal Details'
+     A                                      COLOR(WHT)
+     A                                      DSPATR(UL)
+     A          R POL_SFL                   SFL
+     A*%%TS  SD  20210827  093301  AAKASH      REL-V7R4M0  5770-WDS
+     A            POL_ID    R        O 10  7REFFLD(P_REC/POL_ID AAKASH/POLICY_D-
+     A                                      TL)
+     A            POL_NAME  R        O 10 18REFFLD(P_REC/POL_NAME AAKASH/POLICY-
+     A                                      _DTL)
+     A            P_TERM    R        O 10 36REFFLD(P_REC/P_TERM AAKASH/POLICY_D-
+     A                                      TL)
+     A            P_ENTTRM  R        O 10 49REFFLD(P_REC/P_ENTTRM AAKASH/POLICY-
+     A                                      _DTL)
+     A            P_PLNTYP  R        O 10 62REFFLD(P_REC/P_PLNTYP AAKASH/POLICY-
+     A                                      _DTL)
+     A            C_OPT          1S 0B 10  2
+     A          R POL_CTL                   SFLCTL(POL_SFL)
+     A*%%TS  SD  20210903  070945  AAKASH      REL-V7R4M0  5770-WDS
+     A                                      SFLSIZ(9999)
+     A                                      SFLPAG(0008)
+     A                                      CA03(03 'Exit')
+     A                                      CA12(12 'Back')
+     A                                      CA05(05 'Refresh')
+     A                                      OVERLAY
+     A  31                                  SFLDSP
+     A  32                                  SFLDSPCTL
+     A  33                                  SFLCLR
+     A  34                                  SFLEND(*MORE)
+     A                                  1 34'PROGRAMMERS.IO'
+     A                                      DSPATR(RI)
+     A                                      COLOR(BLU)
+     A                                  1  2'WELCOME POLICY HOLDER'
+     A                                      COLOR(WHT)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(BLU)
+     A                                  2 72TIME
+     A                                      COLOR(BLU)
+     A                                  3 27'Insurance Management System'
+     A                                      DSPATR(RI)
+     A                                      COLOR(WHT)
+     A                                  5 34'Policy Details'
+     A                                      DSPATR(UL)
+     A                                      COLOR(WHT)
+     A                                  6  2'Type Option, Press Enter'
+     A                                      COLOR(BLU)
+     A                                  7  6'5 = Display'
+     A                                      COLOR(BLU)
+     A                                  9  2'Opt'
+     A                                      COLOR(WHT)
+     A                                  9  7'Policy ID'
+     A                                      COLOR(WHT)
+     A                                  9 18'Policy Name'
+     A                                      COLOR(WHT)
+     A                                  9 36'Policy Term'
+     A                                      COLOR(WHT)
+     A                                  9 49'Entry Age'
+     A                                      COLOR(WHT)
+     A                                  9 65'Plan Type'
+     A                                      COLOR(WHT)
+     A            D_USRNAME     15A  O  2  2
+     A          R DIS_POLCY
+     A*%%TS  SD  20210907  033940  AAKASH      REL-V7R4M0  5770-WDS
+     A                                      CA03(03 'Exit')
+     A                                      CA12(12 'Back')
+     A                                  1 34'PROGRAMMERS.IO'
+     A                                      DSPATR(RI)
+     A                                      COLOR(BLU)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(BLU)
+     A                                  2 72TIME
+     A                                      COLOR(BLU)
+     A                                  1  2'WELCOME POLICY HOLDER'
+     A                                      COLOR(WHT)
+     A                                  3 27'Insurance Management System'
+     A                                      DSPATR(RI)
+     A                                      COLOR(WHT)
+     A                                  5 34'Policy Details'
+     A                                      COLOR(WHT)
+     A                                      DSPATR(UL)
+     A                                 23  2'F3=Exit'
+     A                                      COLOR(BLU)
+     A                                 23 13'F12=Back'
+     A                                      COLOR(BLU)
+     A                                  9  2'Policy Name.......:'
+     A                                      COLOR(WHT)
+     A                                 10  2'Policy Term.......:'
+     A                                      COLOR(WHT)
+     A                                 11  2'Policy Plan Type..:'
+     A                                      COLOR(WHT)
+     A                                 12  2'Entry Age.........:'
+     A                                      COLOR(WHT)
+     A                                 13  2'Sum Assured.......:'
+     A                                      COLOR(WHT)
+     A                                 14  2'Policy Premium....:'
+     A                                      COLOR(WHT)
+     A            POL_ID    R        O  8 29REFFLD(P_REC/POL_ID AAKASH/POLICY_D-
+     A                                      TL)
+     A            POL_NAME  R        O  9 29REFFLD(P_REC/POL_NAME AAKASH/POLICY-
+     A                                      _DTL)
+     A            P_TERM    R        O 10 29REFFLD(P_REC/P_TERM AAKASH/POLICY_D-
+     A                                      TL)
+     A            P_PLNTYP  R        O 11 29REFFLD(P_REC/P_PLNTYP AAKASH/POLICY-
+     A                                      _DTL)
+     A            P_SUMASSU R        O 13 29REFFLD(P_REC/P_SUMASSU AAKASH/POLIC-
+     A                                      Y_DTL)
+     A            P_PREMIUM R        O 14 29REFFLD(P_REC/P_PREMIUM AAKASH/POLIC-
+     A                                      Y_DTL)
+     A            P_STATUS  R        O 15 29REFFLD(P_REC/P_STATUS AAKASH/POLICY-
+     A                                      _DTL)
+     A            P_ENTTRM  R        O 12 29REFFLD(P_REC/P_ENTTRM AAKASH/POLICY-
+     A                                      _DTL)
+     A            D_USRNAME     15A  O  2  2
+     A                                 15  2'Policy Status.....:'
+     A                                      COLOR(WHT)
+     A                                  8  2'Policy ID.........:'
+     A                                      COLOR(WHT)
+     A          R C_VWOWNPOL
+     A*%%TS  SD  20210907  034311  AAKASH      REL-V7R4M0  5770-WDS
+     A                                      CA03(03 'Exit')
+     A                                      CA12(12 'Back')
+     A                                  1 34'PROGRAMMERS.IO'
+     A                                      DSPATR(RI)
+     A                                      COLOR(BLU)
+     A                                  1  2'WELCOME POLICY HOLDER'
+     A                                      COLOR(WHT)
+     A                                  1 71DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(BLU)
+     A                                  2 71TIME
+     A                                      COLOR(BLU)
+     A                                  3 27'Insurance Management System'
+     A                                      DSPATR(RI)
+     A                                      COLOR(WHT)
+     A                                  5 28'View Active Policy Details'
+     A                                      COLOR(WHT)
+     A                                      DSPATR(UL)
+     A                                 23  2'F3 = Exit'
+     A                                      COLOR(BLU)
+     A                                 23 15'F12 = Back'
+     A                                      COLOR(BLU)
+     A                                 10  2'Policy ID................:'
+     A                                 11  2'Policy Name..............:'
+     A                                 12  2'Policy Term..............:'
+     A                                 13  2'Policy Laps..............:'
+     A                                 14  2'Starting Date of Policy..:'
+     A                                 15  2'End Date of Policy.......:'
+     A            FLD001        15   O  2  2
+     A          R REQ_SFL                   SFL
+     A*%%TS  SD  20210830  065206  AAKASH      REL-V7R4M0  5770-WDS
+     A            REQ_OPT        1S 0B 10  3
+     A            REQ_ID    R        O 10 12REFFLD(REQ_REC/REQ_ID AAKASH/REQ_DT-
+     A                                      L)
+     A            REQ_STS   R        O 10 61REFFLD(REQ_REC/REQ_STS AAKASH/REQ_D-
+     A                                      TL)
+     A            REQ_TYPE  R        O 10 26REFFLD(REQ_REC/REQ_TYPE AAKASH/REQ_-
+     A                                      DTL)
+     A          R REQ_CTL                   SFLCTL(REQ_SFL)
+     A*%%TS  SD  20210903  072827  AAKASH      REL-V7R4M0  5770-WDS
+     A                                      SFLSIZ(9999)
+     A                                      SFLPAG(0008)
+     A                                      CA03(03 'Exit')
+     A                                      CA12(12 'Back')
+     A                                      OVERLAY
+     A  31                                  SFLDSP
+     A  32                                  SFLDSPCTL
+     A  33                                  SFLCLR
+     A  34                                  SFLEND(*MORE)
+     A                                  1  3'WELCOME POLICY HOLDER'
+     A                                      COLOR(WHT)
+     A                                  1 34'PROGRAMMERS.IO'
+     A                                      DSPATR(RI)
+     A                                      COLOR(BLU)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(BLU)
+     A                                  2 72TIME
+     A                                      COLOR(BLU)
+     A                                  3 27'Insurance Management System'
+     A                                      DSPATR(RI)
+     A                                      COLOR(WHT)
+     A                                  5 33'Request Details'
+     A                                      COLOR(WHT)
+     A                                      DSPATR(UL)
+     A            D_USRNAME     15A  O  2  3
+     A                                  9  2'Opt'
+     A                                      COLOR(WHT)
+     A                                  9 10'Request ID'
+     A                                      COLOR(WHT)
+     A                                  9 30'Request Type'
+     A                                      COLOR(WHT)
+     A                                  9 59'Status of Request'
+     A                                      COLOR(WHT)
+     A                                  6  3'Type Option, Press Enter'
+     A                                      COLOR(BLU)
+     A                                  7  6'5 = Display'
+     A                                      COLOR(BLU)
+     A          R FOOTER
+     A*%%TS  SD  20210907  034311  AAKASH      REL-V7R4M0  5770-WDS
+     A                                 23  2'F3 = Exit'
+     A                                      COLOR(BLU)
+     A                                 23 15'F12 = Back'
+     A                                      COLOR(BLU)
+     A                                 23 29'F5 = Refresh'
+     A                                      COLOR(BLU)
+     A          R D_REQDTL
+     A*%%TS  SD  20210907  035621  AAKASH      REL-V7R4M0  5770-WDS
+     A                                      CA03(03 'Exit')
+     A                                      CA12(12 'Back')
+     A                                  1  2'WELCOME POLICY HOLDER'
+     A                                      COLOR(WHT)
+     A                                  1 34'PROGRAMMERS.IO'
+     A                                      DSPATR(RI)
+     A                                      COLOR(BLU)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(BLU)
+     A                                  2 72TIME
+     A                                      COLOR(BLU)
+     A                                  3 27'Insurance Management System'
+     A                                      DSPATR(RI)
+     A                                      COLOR(WHT)
+     A                                  5 31'View Request Status'
+     A                                      COLOR(WHT)
+     A                                      DSPATR(UL)
+     A            D_USRNAME     15A  O  2  2
+     A                                 10  2'Request Id..............:'
+     A                                      COLOR(WHT)
+     A                                 12  2'Status of Request.......:'
+     A                                      COLOR(WHT)
+     A                                 13  2'Description of Request..:'
+     A                                      COLOR(WHT)
+     A                                 16  2'Comment By Admin........:'
+     A                                      COLOR(WHT)
+     A                                 23  3'F3 = Exit'
+     A                                      COLOR(BLU)
+     A                                 23 16'F12 = Back'
+     A                                      COLOR(BLU)
+     A            REQ_ID    R        O 10 32REFFLD(REQ_REC/REQ_ID AAKASH/REQ_DT-
+     A                                      L)
+     A            REQ_TYPE  R        O 11 32REFFLD(REQ_REC/REQ_TYPE AAKASH/REQ_-
+     A                                      DTL)
+     A            REQ_STS   R        O 12 32REFFLD(REQ_REC/REQ_STS AAKASH/REQ_D-
+     A                                      TL)
+     A            REQ_DESC  R        B 13 32REFFLD(REQ_REC/REQ_DESC AAKASH/REQ_-
+     A                                      DTL)
+     A  13                                  DSPATR(UL)
+     A                                      DSPATR(PR)
+     A                                      CNTFLD(048)
+     A            COMADM    R        O 16 32REFFLD(REQ_REC/COMADM AAKASH/REQ_DT-
+     A                                      L)
+     A                                 11  2'Request Type............:'
+     A                                      COLOR(WHT)
+     A          R RAISE_COM
+     A*%%TS  SD  20210907  041948  AAKASH      REL-V7R4M0  5770-WDS
+     A                                      CA03(03 'Exit')
+     A                                      CA12(12 'Back')
+     A                                      CA05(05 'Refresh')
+     A                                      CF08(08 'view status of complaint')
+     A                                      CF04(04 'prompt')
+     A                                      CF06(06 'Raise complaint')
+     A                                  1  2'WELCOME POLICY HOLDER'
+     A                                      COLOR(WHT)
+     A            D_USRNAME     15A  O  2  2
+     A                                  1 34'PROGRAMMERS.IO'
+     A                                      DSPATR(RI)
+     A                                      COLOR(BLU)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(BLU)
+     A                                  2 72TIME
+     A                                      COLOR(BLU)
+     A                                  3 27'Insurance Management System'
+     A                                      DSPATR(RI)
+     A                                      COLOR(WHT)
+     A                                  5 33'Raise Complaint'
+     A                                      COLOR(WHT)
+     A                                      DSPATR(UL)
+     A                                 23  2'F3=Exit'
+     A                                      COLOR(BLU)
+     A                                 23 13'F12=Back'
+     A                                      COLOR(BLU)
+     A                                 23 25'F5=Refresh'
+     A                                      COLOR(BLU)
+     A            FLD002        70A  O 24  2COLOR(WHT)
+     A            S_RDES       100A  B 13 31CNTFLD(048)
+     A            S_RCUSTNAM    30A  O 11 31
+     A                                 12 49'(F4 = Prompt)'
+     A                                      COLOR(BLU)
+     A            S_RID          5S 0O 10 31
+     A            S_AGENAM      15   O 12 31DSPATR(UL)
+     A                                 10  2'Complaint ID...........:'
+     A                                      COLOR(WHT)
+     A                                 11  2'Customer Name..........:'
+     A                                      COLOR(WHT)
+     A                                 12  2'Agent Name.............:'
+     A                                      COLOR(WHT)
+     A                                 13  2'Complaint Description..:'
+     A                                      COLOR(WHT)
+     A                                 23 39'F8=View Status Of Complaint'
+     A                                      COLOR(BLU)
+     A          R A_NAMEWSFL                SFL
+     A*%%TS  SD  20210907  041138  AAKASH      REL-V7R4M0  5770-WDS
+     A            SA_OPT         1  0B  5  3COLOR(WHT)
+     A            AGEN_NAME R        O  5 13REFFLD(AGENT_REC/AGEN_NAME AAKASH/A-
+     A                                      GENT_MAST)
+     A          R A_NAMECTL                 SFLCTL(A_NAMEWSFL)
+     A*%%TS  SD  20210907  035956  AAKASH      REL-V7R4M0  5770-WDS
+     A                                      SFLSIZ(9999)
+     A                                      SFLPAG(0008)
+     A                                      WINDOW(4 30 15 38)
+     A                                      CA12(12 'Back')
+     A  31                                  SFLDSP
+     A  32                                  SFLDSPCTL
+     A  33                                  SFLCLR
+     A  34                                  SFLEND(*MORE)
+     A                                  1 15'Agent Name'
+     A                                      COLOR(WHT)
+     A                                      DSPATR(UL)
+     A                                  3  3'Type Option,Press Enter'
+     A                                      COLOR(BLU)

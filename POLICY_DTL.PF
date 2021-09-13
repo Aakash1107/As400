@@ -1,0 +1,11 @@
+     A                                      UNIQUE
+     A          R P_REC
+     A            POL_ID         5S 0
+     A            POL_NAME      15A
+     A            P_PLNTYP      18A
+     A            P_ENTTRM      10A
+     A            P_TERM        10A
+     A            P_STATUS      10A
+     A            P_PREMIUM      5S 0
+     A            P_SUMASSU      5S 0
+     A          K POL_ID

@@ -1,0 +1,10 @@
+     A                                      UNIQUE
+     A          R COM_REC
+     A            C_ID           4S 0
+     A            C_AGENT_NA    20A
+     A            C_AGENT_ID     5S 0
+     A            C_DESC       100A
+     A            C_STS          5A
+     A            C_COMADM      30A
+     A            C_POL_ID       5S 0
+     A          K C_ID

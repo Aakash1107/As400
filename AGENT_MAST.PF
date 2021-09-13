@@ -1,0 +1,20 @@
+     A                                      UNIQUE
+     A          R AGENT_REC
+     A            AGEN_ID1       5S 0
+     A            AGEN_NAME     15A
+     A            AGEN_ADD     100A
+     A            AGEN_PIN       6S 0
+     A            AGEN_CTY      15A
+     A            AGEN_STATE    20A
+     A            AGEN_COUN     20A
+     A            AGEN_CON      10S 0
+     A            AGEN_GEN       1A
+     A            AGEN_DOB       8S 0
+     A            AGEN_EMAIL    30A
+     A            AGEN_ADAR1    12S 0
+     A            AGEN_BACC     12S 0
+     A            AGEN_BIFSC     8A
+     A            AGEN_COMMI     5S 0
+     A            AGEN_LAMK1    30A
+     A            AGEN_DOJ       8S 0
+     A          K AGEN_ID1

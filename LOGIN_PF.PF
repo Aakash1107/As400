@@ -1,0 +1,7 @@
+     A                                      UNIQUE
+     A          R L_REC
+     A            USR_LID       10A         COLHDG('USER LOGIN ID')
+     A            USR_PSW        8A         COLHDG('USER PASSWORD')
+     A            USR_TYP       10A         COLHDG('USER TYPE')
+     A            USR_ID         5S 0       COLHDG('USER ID')
+     A          K USR_LID

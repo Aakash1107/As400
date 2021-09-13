@@ -1,0 +1,16 @@
+     A          R CUST_REC
+     A            CUST_ID        5S 0       COLHDG('CUSTOMER ID')
+     A            CUST_NAME     15A         COLHDG('CUSTOMER NAME')
+     A            C_ADDR       100A         COLHDG('CUSTOMER ADDRESS')
+     A            C_LANMRK      30A         COLHDG('CUSTOMER LANDMARK')
+     A            C_CITY        15A         COLHDG('CUSTOMER CITY')
+     A            C_PINCDE       6S 0       COLHDG('CUSTOMER PINCODE')
+     A            C_STATE       20A         COLHDG('CUSTOMER STATE')
+     A            C_MOBNO       10S 0       COLHDG('CUSTOMER MOBILE NO')
+     A            C_ALTMOB      10S 0       COLHDG('CUSTOMER ALT MOBILE')
+     A            C_COUNTRY     20A         COLHDG('CUSTOMER COUNTRY')
+     A            C_GENDER       1A         COLHDG('CUSTOMER GENDER')
+     A            C_EMAIL       30A         COLHDG('CUSTOMER EMAIL')
+     A            C_AADHAR      12S 0       COLHDG('CUSTOMER AADHAR')
+     A            C_DOJ          8S 0       COLHDG('DATE OF JOINING')
+     A          K CUST_ID
